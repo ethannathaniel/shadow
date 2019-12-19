@@ -1,0 +1,26 @@
+#!/bin/bash
+clear
+
+echo "███████╗██████╗ ███████╗████████╗███████╗███╗   ██╗ █████╗ ███████╗"
+echo "██╔════╝██╔══██╗██╔════╝╚══██╔══╝██╔════╝████╗  ██║██╔══██╗╚══███╔╝"
+echo "███████╗██████╔╝█████╗     ██║   ███████╗██╔██╗ ██║███████║  ███╔╝ "
+echo "╚════██║██╔═══╝ ██╔══╝     ██║   ╚════██║██║╚██╗██║██╔══██║ ███╔╝  "
+echo "███████║██║     ███████╗   ██║   ███████║██║ ╚████║██║  ██║███████╗"
+echo "╚══════╝╚═╝     ╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝"
+echo "===========================MADE BY URUSAY=========================="
+
+echo "Inserte la ip del objetivo; "
+read ip
+echo "Inserte la url del objetivo;"                                                                   
+read url
+
+if [ "$ip" = "ip" ];then 
+ gnome-terminal --tab -x cherrytree && gnome-terminal --tab -x nmap -v -A $ip && gnome-terminal --tab -x theHarvester -d $ip -l 2000 -b google && gnome-terminal --tab -x p0f -h && gnome-terminal --tab -x dmitry $ip && gnome-terminal --tab -x ping $ip && gnome-terminal --tab -x host -a $ip && gnome-terminal --tab -x whatweb -ialv $ip && gnome-terminal --tab -x snmp-check $ip -c public && gnome-terminal --tab -x wafw00f $ip && gnome-terminal --tab -x ike-scan -h $ip
+elif [ "$url" = "url" ];then 
+ gnome-terminal --tab -x cherrytree && gnome-terminal --tab -x nmap -v -A $url && gnome-terminal --tab -x theHarvester -d $url -l 2000 -b google && gnome-terminal --tab -x p0f -h && gnome-terminal --tab -x dmitry $url && gnome-terminal --tab -x ping $url && gnome-terminal --tab -x host -a $url && gnome-terminal --tab -x whatweb -ialv $url && gnome-terminal --tab -x snmp-check $url -c public && gnome-terminal --tab -x wafw00f $url && gnome-terminal --tab -x ike-scan -h $url
+fi
+#gnome-terminal --tab -x 
+#gnome-terminal --tab -x 
+#gnome-terminal --tab -x 
+#gnome-terminal --tab -x 
+#gnome-terminal --tab -x 
