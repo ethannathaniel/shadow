@@ -1,0 +1,50 @@
+#!/bin/bash
+clear
+
+echo "========================================================"
+echo "   ██████  ██░ ██  ▄▄▄      ▓█████▄  ▒█████   █     █░  " 
+echo " ▒██    ▒ ▓██░ ██▒▒████▄    ▒██▀ ██▌▒██▒  ██▒▓█░ █ ░█░  "
+echo " ░ ▓██▄   ▒██▀▀██░▒██  ▀█▄  ░██   █▌▒██░  ██▒▒█░ █ ░█   "
+echo "   ▒   ██▒░▓█ ░██ ░██▄▄▄▄██ ░▓█▄   ▌▒██   ██░░█░ █ ░█   "
+echo " ▒██████▒▒░▓█▒░██▓ ▓█   ▓██▒░▒████▓ ░ ████▓▒░░░██▒██▓   "
+echo " ▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ▓░▒ ▒    "
+echo " ░ ░▒  ░ ░ ▒ ░▒░ ░  ▒   ▒▒ ░ ░ ▒  ▒   ░ ▒ ▒░   ▒ ░ ░    "
+echo " ░  ░  ░   ░  ░░ ░  ░   ▒    ░ ░  ░ ░ ░ ░ ▒    ░   ░    "
+echo "       ░   ░  ░  ░      ░  ░   ░        ░ ░      ░      "
+echo "                           ░                            "
+echo " 			 _   __  ___   ___    		      "
+echo " 			| | / / |_  | / _ \    		      "
+echo " 			| |/ / / __/_/ // /    		      "
+echo " 			|___/ /____(_)___/		      "
+echo "                                                        "
+echo "====================MADE BY URUSAY======================"
+echo "	     !==========================!                "
+echo "	     !	     Options	        !                "
+echo "	     !1.Iniciar Anonimato       !                "
+echo "	     !2.Iniciar IRC	        !                "
+echo "	     !3.Iniciar App's spetsnaz  !                "
+echo "	     !4.Iniciar Tor Browser     !                "
+echo "	     !5.Iniciar Chromiun        !                "
+echo "	     !==========================!		 "
+
+echo " Inserte el numero: " 
+
+read op
+
+clear
+if [ "$op" = "1" ];then 
+ echo "Inserte la aplicacion que desea usar; "
+ read app
+ echo "Inserte la url; "
+ read  url
+ service tor stop && gnome-terminal --tab -x tor && gnome-terminal --tab -x proxychains $app $url && shadow2.0
+elif [ "$op" = "2" ]; then
+ shadow2.0 && gnome-terminal --tab -x irssi
+elif [ "$op" = "3" ]; then
+ gnome-terminal --tab -x spetsnaz && clear
+elif [ "$op" = "4" ]; then
+ torbrowser-launcher 
+elif [ "$op" = "4" ]; then
+ chromiun -no-sandbox
+fi
+

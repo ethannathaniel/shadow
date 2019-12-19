@@ -1,0 +1,50 @@
+#!/bin/bash
+clear
+
+echo "========================================================"
+echo "   ██████  ██░ ██  ▄▄▄      ▓█████▄  ▒█████   █     █░  " 
+echo " ▒██    ▒ ▓██░ ██▒▒████▄    ▒██▀ ██▌▒██▒  ██▒▓█░ █ ░█░"
+echo " ░ ▓██▄   ▒██▀▀██░▒██  ▀█▄  ░██   █▌▒██░  ██▒▒█░ █ ░█   "
+echo "   ▒   ██▒░▓█ ░██ ░██▄▄▄▄██ ░▓█▄   ▌▒██   ██░░█░ █ ░█   "
+echo " ▒██████▒▒░▓█▒░██▓ ▓█   ▓██▒░▒████▓ ░ ████▓▒░░░██▒██▓   "
+echo " ▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ▓░▒ ▒    "
+echo " ░ ░▒  ░ ░ ▒ ░▒░ ░  ▒   ▒▒ ░ ░ ▒  ▒   ░ ▒ ▒░   ▒ ░ ░    "
+echo " ░  ░  ░   ░  ░░ ░  ░   ▒    ░ ░  ░ ░ ░ ░ ▒    ░   ░    "
+echo "       ░   ░  ░  ░      ░  ░   ░        ░ ░      ░      "
+echo "                           ░                            "
+echo "               ____         __       ____               "  
+echo "              /  _/__  ___ / /____ _/ / /               "
+echo "             _/ // _ \(_-</ __/ _ '/ / /                "
+echo "            /___/_//_/___/\__/\_'_/_/_/                 "
+echo "                                                        "
+echo "====================MADE BY URUSAY======================"
+echo "	     !==========================!                "
+echo "	     !	     Options	        !                "
+echo "	     !1.Instalar gnome-terminal !                "
+echo "	     !2.Instalar apps Spetsnaz  !                "
+echo "	     !3.Informacion de app's    !                "
+echo "	     !4.Instalar wine	        !	         "
+echo "	     !5.Instalar wine(2paso)    !	         "
+echo "	     !==========================!		 "
+
+echo " Inserte el numero: " 
+
+read op
+
+clear
+if [ "$op" = "1" ];
+ then apt install  gnome-terminal && sleep 5 && shadowinstall
+elif [ "$op" = "2" ]; then
+ gnome-terminal --tab -x apt install irssi && sleep 10 && gnome-terminal --tab -x apt install p0f && sleep 10 && gnome-terminal --tab -x apt install iceweasel && sleep 10 && gnome-terminal --tab -x apt install tor  && sleep 10 && gnome-terminal --tab -x apt install torbrowser-launcher  && sleep 10 && gnome-terminal --tab -x apt install javacc && sleep 10 && gnome-terminal --tab -x apt install whatweb  && sleep 10 && gnome-terminal --tab -x apt install dmitry && sleep 10 && gnome-terminal --tab -x apt install netdiscover && sleep 10 &&  gnome-terminal --tab -x apt install theHarvester  && sleep 10 && shadowinstall
+elif [ "$op" = "3" ]; then
+ echo "App's a instalar; p0f,irssi,iceweasel,tor,torbrowser launcher,javacc,whatweb,dmitry,netdiscover" && sleep 10 && shadowinstall
+elif [ "$op" = "4" ]; then
+ sudo dpkg --add-architecture i386 && wget -nc https://dl.winehq.org/wine-builds/winehq.key && sudo apt-key add winehq.key && 
+echo "agregar estos repositorios;"
+echo "deb https://dl.winehq.org/wine-builds/debian/ stretch main"
+echo "deb https://dl.winehq.org/wine-builds/debian/ buster main"
+echo "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
+elif [ "$op" = "5" ]; then
+ sudo apt update && sudo apt install --install-recommends winehq-stable
+fi
+
